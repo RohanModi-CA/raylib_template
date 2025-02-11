@@ -7,7 +7,6 @@ find_project_root() {
 
   while true; do
     if [ -e "$current_dir/$marker" ]; then  # Check if marker exists in current directory
-      echo "Project root found: $current_dir"
       cd "$current_dir"
       return 0  # Success
     fi

@@ -13,7 +13,7 @@ void initialize_window(int width, int height, int fps, const char* title){
     SetTraceLogLevel(LOG_FATAL); // Prevent Raylib from spamming the console
     const int screenWidth = 1400;
     const int screenHeight = 950;
-    InitWindow(screenWidth, screenHeight, "LC - 3");
+    InitWindow(screenWidth, screenHeight, title);
 	DisableCursor();                    // Limit cursor to relative movement inside the window
     SetTargetFPS(fps);                   // Set our game to run at 60 frames-per-second
 }
@@ -21,7 +21,7 @@ void initialize_window(int width, int height, int fps, const char* title){
 int launch_raylib()
 {
 	/* First we initialize our window and camera. */
-	initialize_window(1300, 900, 30, "LC-3");
+	initialize_window(1300, 900, 30, "RL");
 	Camera3D* camera = initialize_camera();
 
 
